@@ -71,7 +71,7 @@ const main = async () => {
 	await dynamodb.putItem(item).promise();
 	
 	console.log('====== get item ======')
-	const record = await dynamodb.query({
+	const queryResult = await dynamodb.query({
 		TableName,
 		IndexName: 'by_user_group',
 		KeyConditionExpression: '#ugId = :value',
@@ -83,7 +83,7 @@ const main = async () => {
 		},
 		Limit: 1
 	}).promise();
-	p(record)
+	p(queryResult.Items[0])
 }
 
 main().catch(console.error)
