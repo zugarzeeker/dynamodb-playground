@@ -1,0 +1,11 @@
+{
+  "name": "dynamodb-playground",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:zugarzeeker/dynamodb-playground.git",
+  "author": "Supanut Apikulvanich <supanut.overload@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "aws-sdk": "^2.1088.0"
+  }
+}
